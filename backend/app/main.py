@@ -13,12 +13,17 @@ from app.routes.task_routes import router as task_router
 from app.routes.performance_routes import router as performance_router
 from app.routes.ai_routes import router as ai_router
 
+from app.seed_data import seed_database
+
 
 # ==========================================
 # CREATE DATABASE TABLES
 # ==========================================
 
 Base.metadata.create_all(bind=engine)
+
+# Seed demo data if database is empty
+seed_database()
 
 
 # ==========================================
