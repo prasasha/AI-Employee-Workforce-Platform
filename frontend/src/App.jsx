@@ -620,7 +620,7 @@ function App() {
         </div>
 
         <div className="profile">
-          <div className="profile-icon">M</div>
+          <div className="profile-icon">S</div>
 
           <span>PARKER</span>
         </div>
