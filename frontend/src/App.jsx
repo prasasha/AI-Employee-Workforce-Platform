@@ -16,7 +16,7 @@ import {
 
 import "./App.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://ai-employee-workforce-platform.onrender.com";
 
 function App() {
   const [activePage, setActivePage] = useState("dashboard");
