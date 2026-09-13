@@ -1,10 +1,24 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.database.database import Base, engine
+
+# Import all models so SQLAlchemy registers all tables
+from app.models.employee import Employee
+from app.models.task import Task
+from app.models.performance import Performance
+
 from app.routes.employee_routes import router as employee_router
 from app.routes.task_routes import router as task_router
 from app.routes.performance_routes import router as performance_router
 from app.routes.ai_routes import router as ai_router
+
+
+# ==========================================
+# CREATE DATABASE TABLES
+# ==========================================
+
+Base.metadata.create_all(bind=engine)
 
 
 # ==========================================
